@@ -66,24 +66,24 @@ public class RefrigeratorFragment extends Fragment {
         bottomSheetDialog.setContentView(bottomSheetView);
 
         // Initialize the views within the bottom sheet
-        LinearLayout videoLayout = bottomSheetView.findViewById(R.id.layoutVideo);
-        LinearLayout shortsLayout = bottomSheetView.findViewById(R.id.layoutShorts);
-        LinearLayout liveLayout = bottomSheetView.findViewById(R.id.layoutLive);
+        LinearLayout takePhoto = bottomSheetView.findViewById(R.id.takephoto);
+        LinearLayout pickImage = bottomSheetView.findViewById(R.id.pickimage);
+        LinearLayout addManually = bottomSheetView.findViewById(R.id.addmanually);
 
         // Set click listeners for each option in the bottom sheet
-        videoLayout.setOnClickListener(v -> {
+        takePhoto.setOnClickListener(v -> {
             bottomSheetDialog.dismiss();
-            Toast.makeText(requireContext(), "Upload a Video is clicked", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "Take a photo is clicked", Toast.LENGTH_SHORT).show();
         });
 
-        shortsLayout.setOnClickListener(v -> {
+        pickImage.setOnClickListener(v -> {
             bottomSheetDialog.dismiss();
-            Toast.makeText(requireContext(), "Create a short is clicked", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "Pick an image is clicked", Toast.LENGTH_SHORT).show();
         });
 
-        liveLayout.setOnClickListener(v -> {
+        addManually.setOnClickListener(v -> {
             bottomSheetDialog.dismiss();
-            Toast.makeText(requireContext(), "Go live is clicked", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "Add manually is clicked", Toast.LENGTH_SHORT).show();
         });
 
 

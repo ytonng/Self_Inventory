@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -22,7 +23,17 @@
             android:elevation="4dp"
             android:background="@color/lavender"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <!-- Custom Title TextView inside Toolbar -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi, Welcome Back"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+        </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -31,6 +42,7 @@
 
     </LinearLayout>
 
+    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

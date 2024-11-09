@@ -7,8 +7,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -22,10 +24,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
+        // Set up the Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setTitle("Hi, Welcome Back"); // Set the title to an empty string to remove "Navigation Drawer"
+        // Access the TextView in the Toolbar
+        TextView toolbarTitle = findViewById(R.id.toolbar_title); // Make sure to define this ID in XML
+
+        toolbarTitle.setTypeface(Typeface.create("casual", Typeface.BOLD));  // You can use other built-in font styles
+
+
+        setTitle(""); // Optionally remove the default title text
 
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -41,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_home);
         }
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
