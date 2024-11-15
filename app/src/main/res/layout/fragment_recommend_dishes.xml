@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".RecommendDishes">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Back"
+        android:elevation="0dp"
+        android:scaleType="center"
+        android:src="@drawable/baseline_arrow_back_ios_24" />
+
+    <!-- Image of the dish -->
+    <ImageView
+        android:id="@+id/dish_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Dish Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cabonara" />
+
+    <!-- Dish Name -->
+    <TextView
+        android:id="@+id/dish_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dish Name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Ingredients Label -->
+    <TextView
+        android:id="@+id/ingredients_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ingredients"
+        android:textColor="@color/lavender"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Ingredients Text -->
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="List of ingredients here"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Steps Label -->
+    <TextView
+        android:id="@+id/steps_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description / Steps"
+        android:textColor="@color/lavender"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Steps Text -->
+    <TextView
+        android:id="@+id/steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cooking steps or detailed description here"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- YouTube Video View -->
+    <FrameLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp">
+
+        <WebView
+            android:id="@+id/youtube_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>
